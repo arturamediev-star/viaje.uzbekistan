@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#f5f1e8">
+	<meta name="description" content="Turos con Arturo: excursiones por todas las ciudades de Uzbekistán con Arturo y su equipo.">
+	<title>Turos con Arturo | Uzbekistán</title>
+	<link rel="icon" type="image/jpeg" href="photo_2025-10-25_21-12-55.jpg">
+	<link rel="stylesheet" href="styles.css">
+	<script src="script.js" defer></script>
+</head>
+<body>
+	<header class="site-header">
+		<a class="brand" href="#inicio" data-i18n-aria="brand" aria-label="Turos con Arturo">
+			<img class="brand-logo" src="photo_2025-10-25_21-12-55.jpg" data-i18n-alt="brand" alt="Turos con Arturo">
+			<span class="brand-copy">
+				<span class="brand-name" data-i18n="brand">Turos con Arturo</span>
+				<span class="brand-note" data-i18n="brandNote">Viajes por Uzbekistán con Arturo y su equipo</span>
+			</span>
+		</a>
+
+		<button class="menu-toggle" type="button" aria-controls="primary-nav" aria-expanded="false" data-i18n-aria="menuOpen" data-i18n-title="menuOpen">
+			<span></span><span></span>
+		</button>
+
+		<nav class="primary-nav" id="primary-nav" data-i18n-aria="navLabel" aria-label="Navegación principal">
+			<a href="#excursiones" data-i18n="navTours">Excursiones</a>
+			<a href="#reserva" data-i18n="navBooking">Reservar</a>
+			<a href="#resenas" data-i18n="navReviews">Opiniones</a>
+			<a href="#contacto" data-i18n="navContact">Contacto</a>
+		</nav>
+
+		<div class="language-switch" data-i18n-aria="languageLabel" aria-label="Idioma">
+			<button class="language-button is-active" type="button" data-language="es" aria-pressed="true" data-i18n-aria="spanishLabel" title="Español">
+				<img src="images.jpg" alt="">
+				<span>ES</span>
+			</button>
+			<button class="language-button" type="button" data-language="ru" aria-pressed="false" data-i18n-aria="russianLabel" title="Русский">
+				<img src="флаг россии.jpg" alt="">
+				<span>RU</span>
+			</button>
+		</div>
+	</header>
+
+	<main>
+		<section class="hero" id="inicio" aria-labelledby="hero-title">
+			<img class="hero-image" src="7121fd116a687099bcee8f5882f4afdc.jpg" alt="" fetchpriority="high">
+			<div class="hero-shade"></div>
+			<div class="hero-content">
+				<p class="eyebrow hero-eyebrow"><span class="eyebrow-mark"></span><span data-i18n="heroEyebrow">Base en Samarcanda · rutas por todo Uzbekistán</span></p>
+				<h1 id="hero-title" data-i18n="heroTitle">Uzbekistán,<br>ciudad a ciudad.</h1>
+				<p class="hero-description" data-i18n="heroDescription">Viaja por todas las ciudades de Uzbekistán con Arturo y su equipo.</p>
+				<a class="button button-light" href="#excursiones"><span data-i18n="heroButton">Ver precios</span><span class="button-arrow" aria-hidden="true">↘</span></a>
+			</div>
+			<div class="hero-caption"><span data-i18n="heroCaption">Samarcanda · Uzbekistán</span><span class="caption-line"></span><span>39°39′ N&nbsp; 66°58′ E</span></div>
+			<span class="hero-index" aria-hidden="true">01 / 04</span>
+		</section>
+
+		<section class="tour-section section-wrap" id="excursiones" aria-labelledby="tours-title">
+			<div class="section-heading">
+				<div>
+					<p class="eyebrow"><span class="eyebrow-mark"></span><span data-i18n="toursEyebrow">Rutas seleccionadas</span></p>
+					<h2 id="tours-title" data-i18n="toursTitle">Excursiones</h2>
+				</div>
+				<p class="section-intro" data-i18n="toursIntro">Base en Samarcanda y excursiones de cualquier tipo por todas las ciudades de Uzbekistán.</p>
+			</div>
+			<div class="tour-grid" id="tour-grid" aria-live="polite"></div>
+		</section>
+
+		<section class="booking-section" id="reserva" aria-labelledby="booking-title">
+			<div class="booking-inner">
+				<div class="booking-copy">
+					<p class="eyebrow"><span class="eyebrow-mark"></span><span data-i18n="bookingEyebrow">Elige tu fecha</span></p>
+					<h2 id="booking-title" data-i18n="bookingTitle">Tu viaje, a tu manera.</h2>
+					<p data-i18n="bookingDescription">Las fechas y los horarios son flexibles. Elige el día que prefieras y envíanos tu solicitud.</p>
+					<div class="price-note">
+						<span class="price-note-label" data-i18n="samarkandPriceLabel">Samarcanda · programa de 6 horas</span>
+						<strong id="samarkand-price-values">A pie $70 · con transporte $140</strong>
+					</div>
+				</div>
+				<form class="booking-form" id="booking-form">
+					<label class="form-field">
+						<span data-i18n="formName">Tu nombre</span>
+						<input name="name" autocomplete="name" required data-i18n-placeholder="namePlaceholder" placeholder="Nombre y apellidos">
+					</label>
+					<label class="form-field">
+						<span data-i18n="formContact">Cómo contactarte</span>
+						<input name="contact" autocomplete="email" required data-i18n-placeholder="contactPlaceholder" placeholder="Tu WhatsApp o correo electrónico">
+					</label>
+					<label class="form-field">
+						<span data-i18n="formTour">Ciudad o excursión</span>
+						<select name="tour" required id="booking-tour"></select>
+					</label>
+					<label class="form-field">
+						<span data-i18n="formType">Formato</span>
+						<select name="format" required id="booking-format"></select>
+					</label>
+					<label class="form-field">
+						<span data-i18n="formDate">Fecha deseada</span>
+						<input name="date" type="date" id="booking-date">
+					</label>
+					<label class="form-field">
+						<span data-i18n="formTime">Hora preferida</span>
+						<input name="time" type="time">
+					</label>
+					<label class="form-field form-field-wide">
+						<span data-i18n="formMessage">Detalles del viaje</span>
+						<textarea name="message" rows="3" data-i18n-placeholder="messagePlaceholder" placeholder="Número de viajeros, ideas o preguntas"></textarea>
+					</label>
+					<p class="form-hint" data-i18n="formHint">La fecha es flexible. Elige un canal y el mensaje se preparará para enviar.</p>
+					<div class="form-actions">
+						<button class="send-button send-whatsapp" type="submit" name="channel" value="whatsapp" data-i18n="sendWhatsapp">Reservar por WhatsApp</button>
+						<button class="send-button send-telegram" type="submit" name="channel" value="telegram" data-i18n="sendTelegram">Enviar por Telegram</button>
+						<button class="send-button send-email" type="submit" name="channel" value="email" data-i18n="sendEmail">Enviar por correo</button>
+					</div>
+					<p class="booking-status" id="booking-status" role="status" aria-live="polite"></p>
+				</form>
+			</div>
+		</section>
+
+		<section class="story-section" aria-labelledby="story-title">
+			<div class="story-copy">
+				<p class="eyebrow"><span class="eyebrow-mark"></span><span data-i18n="storyEyebrow">El camino también cuenta</span></p>
+				<h2 id="story-title" data-i18n="storyTitle">Más que una parada en el mapa.</h2>
+				<p data-i18n="storyDescription">Pequeños grupos, rutas con sentido y tiempo para mirar alrededor. Así conocemos Uzbekistán: sin prisa y de verdad.</p>
+				<a class="text-link" href="#contacto"><span data-i18n="storyLink">Hablemos de tu viaje</span><span aria-hidden="true">↗</span></a>
+			</div>
+			<div class="story-gallery" data-i18n-aria="galleryLabel" aria-label="Paisajes de Uzbekistán">
+				<figure class="gallery-main">
+					<img src="bukhara 2.jpg" alt="">
+					<figcaption data-i18n="galleryBukhara">Bujará, al caer la tarde</figcaption>
+				</figure>
+				<figure class="gallery-side gallery-side-top">
+					<img src="photo_2026-02-23_23-29-31.jpg" alt="">
+					<figcaption data-i18n="galleryMountains">Montañas de Zamin</figcaption>
+				</figure>
+				<figure class="gallery-side gallery-side-bottom">
+					<img src="0ad25e08c074b476f8cf40d079dabf2f.jpg" alt="">
+					<figcaption data-i18n="galleryArchitecture">Arquitectura de Uzbekistán</figcaption>
+				</figure>
+			</div>
+		</section>
+
+		<section class="reviews-section section-wrap" id="resenas" aria-labelledby="reviews-title">
+			<div class="section-heading">
+				<div>
+					<p class="eyebrow"><span class="eyebrow-mark"></span><span data-i18n="reviewsEyebrow">Palabras de viajeros</span></p>
+					<h2 id="reviews-title" data-i18n="reviewsTitle">Opiniones</h2>
+				</div>
+				<p class="section-intro" data-i18n="reviewsIntro">Cada viaje deja una historia. Pronto compartiremos aquí las experiencias de nuestros viajeros.</p>
+			</div>
+			<div class="reviews-grid">
+				<blockquote class="review-item"><span class="review-stars" aria-label="5 estrellas">★★★★★</span><p data-i18n="reviewOne">Aquí aparecerá la opinión de un viajero.</p><footer data-i18n="reviewPlaceholder">Espacio para una reseña real</footer></blockquote>
+				<blockquote class="review-item"><span class="review-stars" aria-label="5 estrellas">★★★★★</span><p data-i18n="reviewTwo">Comparte aquí cómo fue tu excursión con Arturo y su equipo.</p><footer data-i18n="reviewPlaceholder">Espacio para una reseña real</footer></blockquote>
+				<blockquote class="review-item"><span class="review-stars" aria-label="5 estrellas">★★★★★</span><p data-i18n="reviewThree">Tu experiencia puede ayudar a otros viajeros a elegir su ruta.</p><footer data-i18n="reviewPlaceholder">Espacio para una reseña real</footer></blockquote>
+			</div>
+		</section>
+
+		<a class="text-link review-cta" href="https://docs.google.com/forms/d/e/1FAIpQLSdM8E7Q4hcZDpqla70NwRC2qL72gyKvlj0pMSg8UiCs82gDLQ/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer"><span data-i18n="reviewCta">Comparte tu experiencia</span><span aria-hidden="true">↗</span></a>
+		<section class="contact-section" id="contacto" aria-labelledby="contact-title">
+			<div class="contact-inner">
+				<div class="contact-copy">
+					<p class="eyebrow"><span class="eyebrow-mark"></span><span data-i18n="contactEyebrow">¿Te vienes?</span></p>
+					<h2 id="contact-title" data-i18n="contactTitle">Tu próxima historia empieza aquí.</h2>
+					<p data-i18n="contactDescription">Base en Samarcanda · Uzbekistán. Escríbenos y organizaremos tu ruta por el país.</p>
+				</div>
+				<div class="contact-profile">
+					<img class="contact-portrait" src="photo_2026-09-30_21-07-48.jpg" data-i18n-alt="portraitAlt" alt="Arturo, guía de excursiones en Uzbekistán">
+					<strong data-i18n="guideName">Arturo</strong>
+					<span data-i18n="guideRole">Tu guía en Uzbekistán</span>
+				</div>
+				<div class="contact-actions">
+					<a class="contact-link contact-primary" href="https://wa.me/998917089619" target="_blank" rel="noreferrer"><span class="contact-icon" aria-hidden="true">↗</span><span data-i18n="whatsapp">WhatsApp</span></a>
+					<a class="contact-link" href="tel:+998917089619"><span class="contact-icon" aria-hidden="true">↗</span><span data-i18n="phoneNumber">+998 91 708 96 19</span></a>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="site-footer">
+		<a class="footer-brand" href="#inicio" data-i18n="footerBrand">ТУРЫ У АРТУРА</a>
+		<p data-i18n="footerNote">Viajes hechos con cariño en Uzbekistán</p>
+		<span class="footer-copyright">© <span id="current-year"></span> <span data-i18n="copyright">Todos los derechos reservados</span></span>
+	</footer>
+
+		<dialog class="admin-dialog" id="admin-dialog" aria-labelledby="admin-title">
+			<div class="admin-dialog-header">
+				<div>
+					<p class="eyebrow"><span class="eyebrow-mark"></span><span data-i18n="adminEyebrow">Управление сайтом</span></p>
+					<h2 id="admin-title" data-i18n="adminTitle">Цены экскурсий</h2>
+				</div>
+				<button class="admin-close" type="button" aria-label="Закрыть" data-i18n-aria="adminClose">×</button>
+			</div>
+			<form class="admin-login" id="admin-login">
+				<label class="form-field"><span data-i18n="adminPinLabel">PIN администратора</span><input name="pin" type="password" inputmode="numeric" autocomplete="current-password" required data-i18n-placeholder="adminPinPlaceholder" placeholder="Введите PIN-код"></label>
+				<p class="admin-error" id="admin-error" role="alert"></p>
+				<button class="send-button send-whatsapp" type="submit" data-i18n="adminLogin">Войти</button>
+			</form>
+			<form class="admin-prices" id="admin-prices" hidden>
+				<p class="admin-help" data-i18n="adminHelp">Укажите сумму в долларах. Оставьте поле пустым, чтобы показывать «уточняйте».</p>
+				<div class="admin-price-fields" id="admin-price-fields"></div>
+				<div class="admin-actions">
+					<button class="send-button send-whatsapp" type="submit" data-i18n="adminSave">Сохранить цены</button>
+					<button class="send-button" id="admin-logout" type="button" data-i18n="adminLogout">Выйти</button>
+				</div>
+				<p class="admin-saved" id="admin-saved" role="status" aria-live="polite"></p>
+			</form>
+		</dialog>
+</body>
+</html>
